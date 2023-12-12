@@ -21,16 +21,8 @@ pathway_of_interest = args['path']
 # https://www.genome.jp/kegg-bin/show_organism?org=hsa
 kegg_total = 20537
 
-# genes = ['PIK3CA', 'TP53', 'KRAS', 'PTEN', 'SMAD4', 'CDKN2A']
-# genes = ['PIK3CA', 'BRAF', 'EGFR', 'TP53', 'KRAS', 'GNAS', 'FGFR3', 'PTEN',
-# 'HRAS', 'FBXW7', 'ERBB2', 'CTNNB1', 'SMAD4', 'SF3B1', 'ESR1', 'U2AF1', 'CDKN2A',
-# 'ERBB3', 'RAC1', 'FGFR2', 'NFE2L2', 'MAP2K1', 'AR', 'CIC', 'MET', 'KIT', 'RHOA',
-# 'ERBB4', 'ERCC2', 'CDH1', 'PIK3R1', 'EIF1AX', 'PTPN11', 'TGFBR2', 'FOXA1', 'RB1',
-# 'VHL', 'STK11', 'KDM6A', 'CTCF', 'SMO', 'KEAP1', 'RNF43', 'CARD11']
-
 path_genes = []
 for gene in genes:
-   print(gene)
    # query gene name to find kegg id, using first gene to identify
    api_url = 'https://rest.kegg.jp/find/hsa/{}'.format(gene)
    response = requests.get(api_url)
