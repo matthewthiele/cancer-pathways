@@ -6,7 +6,7 @@ from scipy.stats import hypergeom
 parser = argparse.ArgumentParser(
    prog='query_pathway',
    description='script that takes input genes and pathway, and queries '
-   'KEGG to '
+   'KEGG to perform pathway enrichment using a hypergeometric statistic'
    )
 parser.add_argument('-g', '--genes', metavar='g', nargs='+',
    help='input list of genes for analysis')
